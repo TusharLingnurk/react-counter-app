@@ -4,13 +4,16 @@ function App() {
   const [count, setCount] = useState(0);
 
   let backgroundColor = "#e2abe4";
+  let textColor = "#000000";
 
 if (count === 0) {
   backgroundColor = "#f1abb1"; // red
+  textColor = "#14b441";
 } else if (count >= 3 && count <= 5) {
   backgroundColor = "#deca87"; // yellow
 } else if (count > 5) {
   backgroundColor = "#bbeec7"; // green
+  textColor = "#d21717";
 }
 
   return (
@@ -19,6 +22,7 @@ if (count === 0) {
     textAlign: "center",
     marginTop: "50px",
     backgroundColor: backgroundColor,
+    color: textColor,
     minHeight: "100vh",
     paddingTop: "50px"
     }}
