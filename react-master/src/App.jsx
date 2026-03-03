@@ -27,7 +27,8 @@ if (count === 0) {
     backgroundColor: backgroundColor,
     color: textColor,
     minHeight: "100vh",
-    paddingTop: "50px"
+    paddingTop: "50px",
+    transition: "all 0.5s ease"
     }}
     >
       <h1>My First React App 🚀</h1>
