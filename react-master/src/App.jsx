@@ -1,13 +1,24 @@
+import { useState } from "react";
 import Counter from "./components/Counter";
 
 function App() {
-  return (
-    <div>
-      <h1 style={{ textAlign: "center" }}>
-        My React Training App 🚀
-      </h1>
+  const [count, setCount] = useState(0);
+  const [playerName, setPlayerName] = useState("");
 
-      <Counter />
+  return (
+    <div style={{ textAlign: "center" }}>
+      <h1>Badminton Score Tracker 🏸</h1>
+
+      <input
+        type="text"
+        placeholder="Enter player name"
+        value={playerName}
+        onChange={(e) => setPlayerName(e.target.value)}
+      />
+
+      <h2>Player: {playerName}</h2>
+
+      <Counter title="Match Counter" count={count} setCount={setCount} />
     </div>
   );
 }

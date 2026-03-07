@@ -1,11 +1,8 @@
-import { useState } from "react";
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
+function Counter({ title, count, setCount }) {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h2>Count: {count}</h2>
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <h2>{title}</h2>
+      <h3>Count: {count}</h3>
 
       <button onClick={() => setCount(count + 1)}>
         Increase
